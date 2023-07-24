@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "791622327947",
+    "project_id": "assignment-cignifi",
+    "storage_bucket": "assignment-cignifi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:791622327947:android:fd743466ee4d6baf713e8e",
+        "android_client_info": {
+          "package_name": "com.ipsmeet.cignifi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "791622327947-4j1nngpaa5j64p8a8lkrf3sobh1v7lv1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAW0Dt7vJJpZerPAvAmthZnYRCTOT7FfQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "791622327947-4j1nngpaa5j64p8a8lkrf3sobh1v7lv1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

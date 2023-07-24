@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_20sdp"
+    tools:context=".activity.SignUpActivity">
+
+    <ImageView
+        android:id="@+id/imgV_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:tint="@color/cignifi_blue"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:id="@+id/imgV_cignifi"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:src="@drawable/cignifi1"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:text="Create your Account"
+        android:textSize="@dimen/_17sdp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/edtxt_email"
+        app:layout_constraintTop_toBottomOf="@id/imgV_cignifi" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edtxt_email"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/shape_edittxt"
+        android:elevation="@dimen/_4sdp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:autofillHints="emailAddress"
+        android:padding="@dimen/_15sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_login" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edtxt_password"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/shape_edittxt"
+        android:elevation="@dimen/_4sdp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="@dimen/_15sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtxt_email" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edtxt_cPassword"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/shape_edittxt"
+        android:elevation="@dimen/_4sdp"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        android:padding="@dimen/_15sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtxt_password" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_signIn"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/shape_btn"
+        android:padding="@dimen/_13sdp"
+        android:text="Sign up"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp"
+        android:elevation="@dimen/_4sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtxt_cPassword" />
+
+    <TextView
+        android:id="@+id/txt_or"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="- Or sign up with -"
+        android:textSize="@dimen/_11ssp"
+        android:layout_marginTop="@dimen/_50sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_signIn"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardV_google"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:layout_constraintEnd_toStartOf="@id/cardV_facebook"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintHorizontal_weight="@integer/material_motion_duration_short_1"
+        app:layout_constraintStart_toStartOf="@id/btn_signIn"
+        app:layout_constraintTop_toBottomOf="@id/txt_or">
+
+        <ImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_19sdp"
+            android:contentDescription="@string/cd_google_logo"
+            android:src="@drawable/google" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardV_facebook"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@id/cardV_google"
+        app:layout_constraintEnd_toStartOf="@id/cardV_twitter"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintHorizontal_weight="@integer/material_motion_duration_short_1"
+        app:layout_constraintStart_toEndOf="@id/cardV_google"
+        app:layout_constraintTop_toTopOf="@id/cardV_google">
+
+        <ImageView
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_19sdp"
+            android:contentDescription="@string/cd_facebook_logo"
+            android:src="@drawable/facebook" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardV_twitter"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@id/cardV_google"
+        app:layout_constraintEnd_toStartOf="@id/cardV_apple"
+        app:layout_constraintHorizontal_weight="@integer/material_motion_duration_short_1"
+        app:layout_constraintStart_toEndOf="@id/cardV_facebook"
+        app:layout_constraintTop_toTopOf="@id/cardV_google">
+
+        <ImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/cd_twitter_logo"
+            android:src="@drawable/twitter" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardV_apple"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@id/cardV_google"
+        app:layout_constraintEnd_toEndOf="@id/btn_signIn"
+        app:layout_constraintHorizontal_weight="@integer/material_motion_duration_short_1"
+        app:layout_constraintStart_toEndOf="@id/cardV_twitter"
+        app:layout_constraintTop_toTopOf="@id/cardV_google">
+
+        <ImageView
+            android:layout_width="@dimen/_29sdp"
+            android:layout_height="@dimen/_29sdp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/cd_apple_logo"
+            android:src="@drawable/apple" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
